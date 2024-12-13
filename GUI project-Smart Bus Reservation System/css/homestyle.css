@@ -1,0 +1,23 @@
+.headerbar p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    
+}
+.headerbar ul{
+    list-style: none;
+}
+.headerbar li{
+    display: inline-block;
+    margin-left: 10px;
+}
+.headerbar{
+    position: fixed;
+    left: 0;
+    
+    top: 0;
+    max-width: 100%;
+    min-width: 0%;
+    background-color: bisque;
+}
