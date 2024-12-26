@@ -18,22 +18,24 @@
     margin-left: 20px;
 }
 .headerbar{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     max-width: 100%;
     min-width: 0;
     margin: 0;
-    background-color: bisque;
+    background-color: rgba(226, 226, 226, 0.5); /* bisque with 50% opacity */
+    backdrop-filter: blur(5px); /* adds blur effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
 }
 
 .para1{
     position: relative;
     display: block;
-    
-    position: relative;
-    margin-left: 30px;
+    margin-left: 80px;
+    margin-top: 150pX;
     text-align: left;
 }
 
@@ -50,9 +52,42 @@
     font-weight:700;
     color: rgb(24, 30, 75);
 }
-.aroundul::after{
-    background-image:
+.photo1{
+    display:inline-block;
+    position:relative;
+    margin-top: -650px;
+    margin-left: 52.5%;
+    width: 650px;
+    height: auto;
+    background-image: url(src/hero-bg.svg);
+
 }
 
+.floating { 
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+@keyframes floating { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+} 
 
+.fl1{
+
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    
+
+
+}
+.fl1 img{
+    width: 50px;
+    height: auto;
+}
 
