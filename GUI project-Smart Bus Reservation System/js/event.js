@@ -5,8 +5,22 @@
 // }
 
 const txts=document.querySelector('.chngtxt').children,
-    txtslen=txts.length;
-    console.log(txtslen);
+    const textsLength = txts.length;
+    console.log('Number of text elements:', txtslen);
 
 
     
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});

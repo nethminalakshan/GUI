@@ -544,28 +544,71 @@ body.scrolled .headerbar {
     position: relative;
     display: inline-block;
     place-items: center; 
-    border-radius: 10px;
-    background-color: antiquewhite;
-    font-size:50px;
-    padding: 10px;
-    width: 300px;
-    height: 300px;
+    border-radius: 30px;
+    background-color: #fdf5e6; /* Light beige color */
+    font-size: 50px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px; /* Reduced width */
+    height: 250px; /* Reduced height */
     text-align: center;
-     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Added to prevent decoration from coming out */
+    color: #333; /* Dark gray color for text */
+    line-height: 1.2; /* Improved text alignment */
 }
+
+.block1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+    background-color: #b7b7b7; /* Light khaki color on hover */
+}
+
 .block1 img{
-    width: 100px;
+    width: 80px; /* Adjusted image size */
     height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-
-
 }
-.block1-1{
+
+.foot {
     position: absolute;
-    top:-2000px;
-    font-weight: 400;
+    width: 100%;
+    left: 0;
+    top: 920px;
+    background-color: #1A1C20;
+    z-index: 99;
+    height: 300px;
+}
 
+.tab th {
+    color: white;
+    font-family: Baskerville Old Face;
+    font-size:18px;
+}
+.tab td {
+    color: #85868C;
+    font-family: Baskerville Old Face;
+    font-size: 15px;
+}
+.line {
+    width: 100%;
+    height: 35px;
+    background-color: #F5BA1D;
+    position: absolute;
+    top: 300px;
+    z-index: 100;
+}
 
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
