@@ -716,42 +716,9 @@ body.scrolled .headerbar {
     width: 100%;
     z-index: -1;
     filter: brightness(20%) blur(1px); /* Add dark blur effect */
+    z-index: -3;
 }
 
-
-.calendar {
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding: 10px;
-    background-color: #2a2e38;
-    border-radius: 10px;
-  }
-  
-  .calendar-row {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .calendar-item {
-    display: inline-block;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-    background-color: #3a3e4b;
-    border-radius: 5px;
-    color: #a3a8b5;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .calendar-item:hover {
-    background-color: #4a4e5b;
-  }
-  
-  .selected {
-    background-color: #4a90e2;
-    color: white;
-  }
   
 
 .body2 {
@@ -767,7 +734,7 @@ body.scrolled .headerbar {
 
 .bus-card-container {
     position: relative;
-    top: 100px;
+    top: 800px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;

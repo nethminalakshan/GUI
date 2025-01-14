@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="src\tab icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"  type="text/css"  href="css/homestyle.css">
+    <script src="js\event.js"></script>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="back1">
+    </div>
+
+
+
+
+    <nav class="headerbar" id="id1">
+        <div class="bg"></div>
+        <a href="home.html"><img class="logo" src="src/2.png"></a>
+        <ul>
+            <li><i class="fa-solid fa-phone" style="margin-left: 800px;"><a href="journeys.html"><p>Journeys</p></a></i></li>
+            <li><i class="fa-solid fa-envelope"><a href="aboutus.html"><p>About Us</p></a></i></li>
+            <li><i class="fa-solid fa-right-to-bracket" style="border: none;  border-radius: 2px;border-color: black;"><a href="faqs.html"><p>FAQs</p></a></i></li>
+            <li><i class="fa-solid fa-user-plus"><a href="contact.html"><p>Contact</p></a></i></li>  
+        </ul>
+    </nav>
+
+</body>
