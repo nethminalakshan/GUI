@@ -1,7 +1,26 @@
-body{
-    font-family:"Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    
+body {
+    font-family: "Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 3px solid #f1f1f1; /* Padding around the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
 /* yellow background */
 .back1{
     position: absolute;
@@ -82,6 +101,7 @@ body{
 .headerbar li{
     display: inline-block;
     margin-left: 20px;
+    
 }
 .headerbar{
     position: fixed;
@@ -95,8 +115,9 @@ body{
     background-color: rgba(231, 201, 150); 
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 1;
+    
     transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 5;
     animation: slideDown 1.5s ease-in-out;
  
 }
@@ -200,22 +221,22 @@ body.scrolled .headerbar {
     box-sizing: content-box;
     font-size: 70px;
     height: 150px;
-    top:800px;
+    top:1000px;
     left: 0px;
     display: flex;
-    
+    z-index: -1;
     width: 100%;
 
 }
-.lidisbc{
+.lidsbc{
     position: absolute;
     width: 100%;
     left: 0px;
-    top: 0px;
-    height: 150px;
+    top: -200px;
+    height: 800px;
     /* background: linear-gradient(to bottom, #77a1d3,#79cbca,#eaeaea); */
-    background-color:#e1b564;
-    z-index: -1;
+    background-color:rgba(1, 1, 1, 0.466);
+    z-index:-1;
 
 
 }
@@ -321,30 +342,117 @@ body.scrolled .headerbar {
 
 }
 
-
 .reservation-container {
-    background-color: rgba(250, 100, 100, 0.5);
+    background-color: #f9f9f9; /* Light background color */
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    margin: 50px auto;
-    width: 60%;
+    align-items: flex-start; /* Align to the left */
+    border-radius: 40px;
+    margin: -100px 900px;
+    width: 400px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: slideIn 1s ease-in-out; /* Add slide-in animation */
+}
+
+.reservation-form select,
+.reservation-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for focus effect */
+}
+
+.reservation-form select:focus,
+.reservation-form input[type="date"]:focus {
+    border-color: #323198; /* Primary color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(50, 49, 152, 0.5); /* Primary color shadow */
+}
+
+.reservation-form button {
+    background-color: #323198; /* Primary color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.reservation-form button:hover {
+    background-color: #1f1f7a; /* Darker shade of primary color */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.reservation-container .reservation-form button {
+    background-color: #28a745; /* Success color */
+    font-size: 18px;
+}
+
+.reservation-container .reservation-form button:hover {
+    background-color: #218838; /* Darker shade of success color */
 }
 
 .reservation-container h1 {
     color: #333;
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 18px;
+    text-align: center;
 }
 
-.reservation-form {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    flex-wrap: wrap;
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .reservation-form select,
@@ -359,76 +467,42 @@ body.scrolled .headerbar {
 
 .reservation-form select:focus,
 .reservation-form input[type="date"]:focus {
-    border-color: #007bff;
+    border-color: #323198; /* Primary color */
     outline: none;
-}
-
-.reservation-form button {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.reservation-form button:hover {
-    background-color: #0056b3;
 }
 
 .reservation-form select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2210%22%20height%3D%225%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M0%200l5%205%205-5z%22/%3E%3C/svg%3E');
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2210%22%20height%3D%225%22%3E%3Cpath%20fill%3D%22%23323198%22%20d%3D%22M0%200l5%205%205-5z%22/%3E%3C/svg%3E');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 10px 5px;
     padding-right: 30px;
 }
 
-.reservation-container .reservation-form button {
-    background-color: #28a745;
-    font-size: 18px;
-}
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+    }
 
-.reservation-container .reservation-form button:hover {
-    background-color: #218838;
-}
+    .reservation-container {
+        width: 90%;
+        padding: 20px;
+    }
 
-.seat-type {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.seat-type:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.seat-type select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2210%22%20height%3D%225%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M0%200l5%205%205-5z%22/%3E%3C/svg%3E');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 10px 5px;
-    padding-right: 30px;
+    .reservation-form button {
+        width: 100%;
+    }
 }
 /* //////////////////////////////////////////////// */
 .photo2{
     position: absolute;
     width: 1800px;
     left: 0px;
-    top: 400px;
+    top:1200px;
     z-index: -2;
     height: auto;
     opacity: 50%;
@@ -507,7 +581,8 @@ body.scrolled .headerbar {
     width: 100%;
     display: inline-block;
     place-items: center;
-    top: 1000px; /* Moved 700px up from the original position */
+    top: 1000px; 
+    z-index: -1;/* Moved 700px up from the original position */
 }
 .payments p{
     font-size: 30px;
