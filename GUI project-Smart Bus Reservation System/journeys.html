@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="src\tab icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"  type="text/css"  href="css/homestyle.css">
+    <script src="js\event.js"></script>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
+</head>
+<body class="body2">
+    
+
+
+
+    <nav class="headerbar" id="id1">
+        <div class="bg"></div>
+        <img class="logo" src="src/2.png">
+        <ul>
+            <li><i class="fa-solid fa-phone" style="margin-left: 800px;"><p>Journeys</p></i></li>
+            <li><i class="fa-solid fa-envelope"><p>About Us</p></i></li>
+            <li><i class="fa-solid fa-right-to-bracket" style="border: none;  border-radius: 2px;border-color: black;"><p>FAQs</p></i></li>
+            <li><i class="fa-solid fa-user-plus"><p>Contact</p></i></li>  
+        </ul>
+    </nav>
+
+
+    <video autoplay muted loop id="myVideo" class="video1">
+        <source src="src\vecteezy_singapore-1-june-2022-singapore-public-transportation-bus_24165259.mp4" type="video/mp4">
+
+    </video>
+
+
+    
+
+
+
+
+
+
+
+
+
+    <div class="calendar">
+  <div class="calendar-row">
+    <div class="calendar-item">
+      <div class="calendar-day">MON</div>
+      <div class="calendar-date">13</div>
+    </div>
+    <div class="calendar-item selected">
+      <div class="calendar-day">TUE</div>
+      <div class="calendar-date">14</div>
+    </div>
+    <div class="calendar-item">
+      <div class="calendar-day">WED</div>
+      <div class="calendar-date">15</div>
+    </div>
+    <div class="calendar-item">
+        <div class="calendar-day">WED</div>
+        <div class="calendar-date">15</div>
+      </div>
+      <div class="calendar-item">
+        <div class="calendar-day">WED</div>
+        <div class="calendar-date">15</div>
+      </div>
+      <div class="calendar-item">
+        <div class="calendar-day">WED</div>
+        <div class="calendar-date">15</div>
+      </div>
+      <div class="calendar-item">
+        <div class="calendar-day">WED</div>
+        <div class="calendar-date">15</div>
+      </div>
+    <!-- Add more calendar items as needed -->
+  </div>
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+    <div class="bus-card-container">
+            <!-- Bus Card 1 -->
+            <div class="bus-card">
+                <h3>Diniduru Super Line - Luxury 37 Seater</h3>
+                <h2>Vavuniya - Anuradhapura - Colombo (03:40 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Adjustable Seats</span>
+                    <span>✔ Free WiFi</span>
+                    <span>✔ Air Conditioned</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Vavuniya 03:40 PM</span>
+                    <span>Arrives: Pettah Bus Stand 09:00 PM</span>
+                    <span>Duration: Approx 5h 20m</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,580 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>1 seat available</p>
+                        <p id="countdown1">Closes in 3:45:47</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 2 -->
+            <div class="bus-card">
+                <h3>NCG Express - Luxury 49 Seater</h3>
+                <h2>Makumbura - Badulla (05:15 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Air Conditioned</span>
+                    <span>✔ Large Windows</span>
+                    <span>✔ Footrest Seats</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Makumbura 05:15 PM</span>
+                    <span>Arrives: Badulla 09:30 PM</span>
+                    <span>Duration: Approx 4h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>2,130 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>0 seats available</p>
+                        <p id="countdown2">Closes in 4:59:29</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 3 -->
+            <div class="bus-card">
+                <h3>InterCity Express - Luxury 45 Seater</h3>
+                <h2>Kandy - Colombo (06:00 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Reclining Seats</span>
+                    <span>✔ Charging Ports</span>
+                    <span>✔ Snacks Available</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Kandy 06:00 PM</span>
+                    <span>Arrives: Colombo 09:00 PM</span>
+                    <span>Duration: Approx 3h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,750 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>5 seats available</p>
+                        <p id="countdown3">Closes in 2:30:15</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 4 -->
+            <div class="bus-card">
+                <h3>Royal Tours - Luxury 50 Seater</h3>
+                <h2>Galle - Colombo (07:00 AM)</h2>
+                <div class="amenities">
+                    <span>✔ Air Conditioned</span>
+                    <span>✔ Onboard Entertainment</span>
+                    <span>✔ Snacks Available</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Galle 07:00 AM</span>
+                    <span>Arrives: Colombo 10:00 AM</span>
+                    <span>Duration: Approx 3h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,600 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>3 seats available</p>
+                        <p id="countdown4">Closes in 1:15:30</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 5 -->
+            <div class="bus-card">
+                <h3>Comfort Lines - Luxury 40 Seater</h3>
+                <h2>Jaffna - Colombo (09:00 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Adjustable Seats</span>
+                    <span>✔ Free WiFi</span>
+                    <span>✔ Charging Ports</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Jaffna 09:00 PM</span>
+                    <span>Arrives: Colombo 04:00 AM</span>
+                    <span>Duration: Approx 7h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>2,000 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>2 seats available</p>
+                        <p id="countdown5">Closes in 5:20:45</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 6 -->
+            <div class="bus-card">
+                <h3>Swift Travels - Luxury 38 Seater</h3>
+                <h2>Negombo - Colombo (08:30 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Air Conditioned</span>
+                    <span>✔ Reclining Seats</span>
+                    <span>✔ USB Charging Ports</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Negombo 08:30 PM</span>
+                    <span>Arrives: Colombo 10:30 PM</span>
+                    <span>Duration: Approx 2h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,200 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>8 seats available</p>
+                        <p id="countdown6">Closes in 4:10:30</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 7 -->
+            <div class="bus-card">
+                <h3>Express Way - Luxury 44 Seater</h3>
+                <h2>Hambantota - Colombo (06:30 AM)</h2>
+                <div class="amenities">
+                    <span>✔ Air Conditioned</span>
+                    <span>✔ Reclining Seats</span>
+                    <span>✔ Free Snacks</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Hambantota 06:30 AM</span>
+                    <span>Arrives: Colombo 11:00 AM</span>
+                    <span>Duration: Approx 4h 30m</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,450 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>7 seats available</p>
+                        <p id="countdown7">Closes in 6:30:45</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 8 -->
+            <div class="bus-card">
+                <h3>Rapid Transit - Luxury 42 Seater</h3>
+                <h2>Matara - Colombo (12:30 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Reclining Seats</span>
+                    <span>✔ Charging Ports</span>
+                    <span>✔ Onboard Entertainment</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Matara 12:30 PM</span>
+                    <span>Arrives: Colombo 04:30 PM</span>
+                    <span>Duration: Approx 4h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,650 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>6 seats available</p>
+                        <p id="countdown8">Closes in 2:15:45</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 9 -->
+            <div class="bus-card">
+                <h3>City Link - Luxury 41 Seater</h3>
+                <h2>Kurunegala - Colombo (04:30 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Air Conditioned</span>
+                    <span>✔ Free WiFi</span>
+                    <span>✔ Reclining Seats</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Kurunegala 04:30 PM</span>
+                    <span>Arrives: Colombo 07:00 PM</span>
+                    <span>Duration: Approx 2h 30m</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,300 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>10 seats available</p>
+                        <p id="countdown9">Closes in 3:45:00</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 10 -->
+            <div class="bus-card">
+                <h3>Super Coach - Luxury 36 Seater</h3>
+                <h2>Polonnaruwa - Colombo (01:00 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Adjustable Seats</span>
+                    <span>✔ Free WiFi</span>
+                    <span>✔ Onboard Snacks</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Polonnaruwa 01:00 PM</span>
+                    <span>Arrives: Colombo 06:00 PM</span>
+                    <span>Duration: Approx 5h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,800 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>4 seats available</p>
+                        <p id="countdown10">Closes in 4:00:30</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 11 -->
+            <div class="bus-card">
+                <h3>Elite Travels - Luxury 43 Seater</h3>
+                <h2>Anuradhapura - Colombo (02:30 PM)</h2>
+                <div class="amenities">
+                    <span>✔ Reclining Seats</span>
+                    <span>✔ Free WiFi</span>
+                    <span>✔ Charging Ports</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Anuradhapura 02:30 PM</span>
+                    <span>Arrives: Colombo 08:30 PM</span>
+                    <span>Duration: Approx 6h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,700 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>3 seats available</p>
+                        <p id="countdown11">Closes in 5:00:00</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bus Card 12 -->
+            <div class="bus-card">
+                <h3>Luxury Express - Luxury 39 Seater</h3>
+                <h2>Colombo - Galle (09:00 AM)</h2>
+                <div class="amenities">
+                    <span>✔ Air Conditioned</span>
+                    <span>✔ Reclining Seats</span>
+                    <span>✔ Free Snacks</span>
+                </div>
+                <div class="details">
+                    <span>Departs: Colombo 09:00 AM</span>
+                    <span>Arrives: Galle 12:00 PM</span>
+                    <span>Duration: Approx 3h</span>
+                </div>
+                <div class="pricing">
+                    <p>for as low as</p>
+                    <h1>1,500 LKR</h1>
+                    <p>PER SEAT</p>
+                    <button class="book-button">Book My Seats</button>
+                    <div class="availability">
+                        <p>9 seats available</p>
+                        <p id="countdown12">Closes in 2:15:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            // JavaScript for countdown
+            const countdownTimes = [
+                { id: 'countdown1', time: 3 * 60 * 60 + 45 * 60 + 47 },
+                { id: 'countdown2', time: 4 * 60 * 60 + 59 * 60 + 29 },
+                { id: 'countdown3', time: 2 * 60 * 60 + 30 * 60 + 15 },
+                { id: 'countdown4', time: 1 * 60 * 60 + 15 * 60 + 30 },
+                { id: 'countdown5', time: 5 * 60 * 60 + 20 * 60 + 45 },
+                { id: 'countdown6', time: 4 * 60 * 60 + 10 * 60 + 30 },
+                { id: 'countdown7', time: 6 * 60 * 60 + 30 * 60 + 45 },
+                { id: 'countdown8', time: 2 * 60 * 60 + 15 * 60 + 45 },
+                { id: 'countdown9', time: 3 * 60 * 60 + 45 * 60 + 0 },
+                { id: 'countdown10', time: 4 * 60 * 60 + 0 * 60 + 30 },
+                { id: 'countdown11', time: 5 * 60 * 60 + 0 * 60 + 0 },
+                { id: 'countdown12', time: 2 * 60 * 60 + 15 * 60 + 0 }
+            ];
+    
+            function updateCountdown(id, countdownTime) {
+                const hours = Math.floor(countdownTime / 3600);
+                const minutes = Math.floor((countdownTime % 3600) / 60);
+                const seconds = countdownTime % 60;
+    
+                document.getElementById(id).innerText = 
+                    `Closes in ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().pad
+        </script>
+    </body>
+    </html>
+    
+
+</body>

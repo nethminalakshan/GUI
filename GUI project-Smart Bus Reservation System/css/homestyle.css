@@ -704,3 +704,138 @@ body.scrolled .headerbar {
     transform: translateY(0);
 }
 
+/* /////////////////////////////////////////////journeys////////////////////////////////////////////////////////////////// */
+
+
+
+.video1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(20%) blur(1px); /* Add dark blur effect */
+}
+
+
+.calendar {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #2a2e38;
+    border-radius: 10px;
+  }
+  
+  .calendar-row {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .calendar-item {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: #3a3e4b;
+    border-radius: 5px;
+    color: #a3a8b5;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .calendar-item:hover {
+    background-color: #4a4e5b;
+  }
+  
+  .selected {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+
+.body2 {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.bus-card-container {
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.bus-card {
+    background-color: #2a3b4c;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.bus-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.bus-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #88c1e7;
+}
+
+.bus-card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.amenities span, .details span {
+    display: block;
+    margin: 5px 0;
+}
+
+.pricing {
+    margin-top: 20px;
+}
+
+.pricing p {
+    margin: 5px 0;
+}
+
+.pricing h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.book-button {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.book-button:hover {
+    background-color: red; /* Change color to red on hover */
+}
+
+.availability p {
+    margin: 5px 0;
+}
+
+.availability p:last-child {
+    color: #ff4d4d;
+}
