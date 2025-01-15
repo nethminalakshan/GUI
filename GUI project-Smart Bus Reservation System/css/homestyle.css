@@ -708,6 +708,11 @@ body.scrolled .headerbar {
 
 
 
+
+
+
+
+
 .video1 {
     position: absolute;
     left: 0px;
@@ -734,7 +739,7 @@ body.scrolled .headerbar {
 
 .bus-card-container {
     position: relative;
-    top: 800px;
+    top: 1800px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
