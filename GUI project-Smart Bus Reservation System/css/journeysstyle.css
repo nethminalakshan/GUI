@@ -1,0 +1,129 @@
+
+.video1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(20%) blur(1px); /* Add dark blur effect */
+    z-index: -3;
+}
+
+  
+
+.body2 {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.bus-card-container {
+    position: relative;
+    top: 1800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.bus-card-container {
+    overflow: hidden;
+}
+
+.bus-card-slider {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.bus-card {
+    min-width: 33.33%;
+    flex-shrink: 0;
+}
+
+.bus-card {
+    background-color: #2a3b4c;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.bus-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.bus-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #88c1e7;
+}
+
+.bus-card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.amenities span, .details span {
+    display: block;
+    margin: 5px 0;
+}
+
+.pricing {
+    margin-top: 20px;
+}
+
+.pricing p {
+    margin: 5px 0;
+}
+
+.pricing h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.book-button {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.book-button:hover {
+    background-color: red; /* Change color to red on hover */
+}
+
+.availability p {
+    margin: 5px 0;
+}
+
+.availability p:last-child {
+    color: #ff4d4d;
+}
+
+.bgjr{
+    position: absolute;
+    width: 100%;
+    height: 2300px;
+    top:1800px;
+     background-color: rgba(200, 200, 200, 0.8);
+}
