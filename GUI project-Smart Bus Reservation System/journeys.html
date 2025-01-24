@@ -51,6 +51,72 @@
             <li><i class="fa-solid fa-user-plus"><p>Contact</p></i></li>  
         </ul>
     </nav>
+cd
+    <style>
+        
+        
+
+        .container2 {
+            position: absolute;
+            top:100px;
+            width: 400px;  /* Fixed width for the container */
+            text-align: center;
+            margin: 0 auto;  /* Center the container */
+            z-index: 5;
+        }
+
+        h1 {
+            font-size: 60px;  /* Increase font size */
+            color: #333;
+            margin: 0;
+            display: inline-block; /* Ensure it aligns properly */
+        }
+
+        h1 {
+            font-size: 48px;  /* Set font size in px */
+            color: #333;
+            margin: 0;
+            display: inline-block; /* Ensure it aligns properly */
+        }
+
+        .fixed-text {
+            font-weight: bold;
+        }
+
+        .changing-text {
+            font-weight: bold;
+            color: #007BFF;
+            display: inline-block;
+            margin-left: 10px;  /* Add space between 'Your journey' and changing text */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+
+
+    <div class="container2">
+        <h1>
+            <span class="fixed-text">Your journey</span>
+            <span class="changing-text"></span>
+        </h1>
+    </div>
+    <script>
+        const words = ['starts!', 'continues!', 'unfolds!'];
+        const changingTextElement = document.querySelector('.changing-text');
+        let index = 0;
+
+        function changeWord() {
+            changingTextElement.style.opacity = 0;  // Fade out the word
+            setTimeout(() => {
+                changingTextElement.textContent = words[index];
+                changingTextElement.style.opacity = 1;  // Fade in the new word
+                index = (index + 1) % words.length;  // Cycle through words
+            }, 1000);  // Wait for the fade-out transition before changing the word
+        }
+
+        setInterval(changeWord, 2000);  // Change word every 2 seconds
+        changeWord();  // Initialize with the first word
+    </script>
 
     <video autoplay muted loop id="myVideo" class="video1">
         <source src="src\vecteezy_singapore-1-june-2022-singapore-public-transportation-bus_24165259.mp4" type="video/mp4">
@@ -496,6 +562,25 @@
 
 
     </div>
+
+    <style>
+        .bus-card {
+    min-width: 33.33%;
+    flex-shrink: 0;
+}
+
+    .bus-card {
+    background-color: #2a3b4c;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+
+
+    
+}
+    </style>
 
 
     <div class="bus-card-container">

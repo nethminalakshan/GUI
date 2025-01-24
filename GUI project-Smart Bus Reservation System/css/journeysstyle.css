@@ -32,23 +32,11 @@
     max-width: 1200px;
     width: 100%;
 }
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
-.bus-card-container {
-    overflow: hidden;
-}
 
-.bus-card-slider {
-    display: flex;
-    animation: slide 10s infinite;
-}
+
+
+
 
 .bus-card {
     min-width: 33.33%;
